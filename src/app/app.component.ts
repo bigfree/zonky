@@ -8,7 +8,9 @@ import { ZonkyService } from './service/zonky.service';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
 	title = 'zonky-test';
+
 	public amountRes = -1;
 	public form = {
 		rating: ''
@@ -20,13 +22,11 @@ export class AppComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	averageAmount(loans: any) {
+	averageAmount(loans: any): number {
 		const loansCount = loans.length;
 		let allAmounts = 0;
 
-		loans.map(({amount}) => {
-			allAmounts = allAmounts + amount;
-		});
+		loans.map(({ amount }) => allAmounts = allAmounts + amount);
 
 		return allAmounts / loansCount;
 	}
@@ -36,8 +36,8 @@ export class AppComponent implements OnInit {
 			return false;
 		}
 
-		this.zonkyService.getLoans(this.form.rating).subscribe(res => {
-			this.amountRes = this.averageAmount(res);
-		});
+		this.zonkyService
+			.getLoans(this.form.rating)
+			.subscribe(res => this.amountRes = this.averageAmount(res));
 	}
 }

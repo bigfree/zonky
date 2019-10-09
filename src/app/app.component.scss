@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+.app-zonky {
+	max-width: 40vw;
+	margin: 6vh auto 0;
+	font-family: 'Segoe UI';
+
+	// Header
+	&__header {
+		text-align: center;
+		font-size: 45px;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+
+	// Body
+	&__body {
+		padding: 20px;
+		border: 1px solid #dedede;
+		background: #fefefe;
+		box-shadow: 5px 5px 5px 0 rgba(#000000, .09);
+	}
+
+	// Form
+	&__form {
+		display: flex;
+	}
+
+	// Input
+	&__input {
+		flex: 1;
+		padding: 0 10px;
+		height: 42px;
+		border: 2px solid #dedede;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	// Button
+	&__button {
+		color: #fff;
+		background: orangered;
+		border: 0;
+		margin-left: 10px;
+		font-weight: bold;
+		padding: 0 15px;
+	}
+
+	// Amount
+	&__amount {
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+
+		// Item
+		&-item {
+			padding-top: 20px;
+		}
+	}
+}

@@ -32,7 +32,7 @@
 	&__input {
 		flex: 1;
 		padding: 0 10px;
-		height: 42px;
+		height: 44px;
 		border: 2px solid #dedede;
 		font-weight: bold;
 		font-size: 18px;
@@ -58,6 +58,13 @@
 		// Item
 		&-item {
 			padding-top: 20px;
+
+			&-desc {
+				font: {
+					size: 19px;
+					weight: 500;
+				}
+			}
 		}
 	}
 }

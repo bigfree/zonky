@@ -16,6 +16,7 @@
 		</form>
 		<div class="app-zonky__amount">
 			<div class="app-zonky__amount-item" *ngIf="amountRes && amountRes != -1">
+				<div class="app-zonky__amount-item-desc">Priemerná výška pôžičky:</div>
 				{{ amountRes }} CZK
 			</div>
 			<div class="app-zonky__amount-item" *ngIf="!amountRes">
